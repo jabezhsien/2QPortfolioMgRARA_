@@ -1,11 +1,11 @@
-header {
+.header {
     background-color: #4c8caf;
     color: white;
-    padding: 10px 0;
+    padding: 10px   0px;
     text-align: center;
 }
 
-logo-container {
+.logo-container {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -18,10 +18,10 @@ logo-container {
 }
 
 .topnav a {
-  float: center;
+  float: left;
   color: #f2f2f2;
   text-align: center;
-  padding: 14px 16px;
+  padding: 20px 16px;
   text-decoration: none;
   font-size: 17px;
 }
@@ -32,5 +32,6 @@ logo-container {
 }
 
 .topnav a.active {
-  background-color: #6d1125;
+  background-color: #04AA6D;
   color: white;
+} 
