@@ -73,7 +73,7 @@
 
 - Guided Question: What is the effect of position: absolute on an element? How is it different from fixed?
 
-- Answer: It makes the figure not affected by other elements. It will remain in the position given regardless of other elements having the same position.
+- Answer: `position: absolute` removes the element from the normal document flow and positions it relative to the nearest positioned ancestor or the page if none exists. Unlike `fixed`, the absolute element is not pinned to the viewport; it can still move when the page scrolls and is positioned relative to its containing block, not necessarily the screen.
 
 ### Step 4 : (Absolute)
 
@@ -98,21 +98,46 @@
 
 - Challenge: 
     * What changes that you have to do on the code that will position .notice box on the top right corner of the .content box? Please write the code on paper as well (both html and css on the part of .notice and .content).
+      - Answer: Place the notice inside the content box and make the content positioned, for example:
+        HTML Part:
+        <div class="content">
+          Main Content
+          <div class="notice">Notice!</div>
+        </div>
+       
+       CSS Part:
+        .content {
+          position: relative;
+          z-index: 1;
+        }
+        .notice {
+          position: absolute;
+          top: 0;
+          right: 0;
+          z-index: 2;
+        }
+        
+        So to make the .notice part appear on the top right corner of .content, we have to set the z-index of .content to be less than the z-index of .notice, and we have to put the div tag of .notice into the div tag of .content. Just set the top and right values of the css of .notice to zero so that it really appears on the top right corner.
+
     * Try to change the position of .content to relative then to fixed. What do you observed each time?
+      - Answer: The position of .notice changes relative to the position of .content. Whenever I change the position of .content, the .notice box seems to follow it as well.
     * What do you observe on about the effect of z-index on .notice and .content boxes?
+      - Answer: If I put a smaller z-index on .content, then the .notice box will overlap the .content box, and when .notice has a smaller z-index, the .content box will overlap the .notice box.
 
 3. Please answer the following reflection questions (15 minutes)
 
     a. Could you summarize the differences between the CSS position values (static, relative, absolute, fixed)? 
 
-    
+    - Answer: static is the default position and follows normal document flow. relative keeps the element in flow but allows offset from its normal position. absolute removes the element from flow and positions it relative to the nearest positioned ancestor or the viewport. fixed also removes the element from flow but positions it relative to the viewport so it stays visible while scrolling.
 
     b. How does absolute positioning depend on its parent element?
 
-
+    - Answer: Absolute positioning is relative to the nearest ancestor that has a position other than static (relative, absolute, fixed). If no such ancestor exists, it is positioned relative to the initial containing block (usually the page). This means the parent’s positioning can change where the absolutely positioned element appears.
 
     c. How do you differentiate sticky from fixed (you can research on sticky)?
 
-    
+    - Answer: fixed keeps an element locked to the viewport at all times, even when the page is scrolled. sticky behaves like a normal element until scrolling reaches its threshold, then it just sticks in place within its parent container (usually the viewport).
 
     d. If you were designing a webpage for a school event, how might you use positioning to highlight important information? Please give concrete examples.
+
+    - Answer: I would use fixed for an event banner or a navigation bar that SHOULD NOT move when I scroll the page so the navigation links and important dates-to-remember stay visible. I would use absolute inside a section box to place a “Register Now” button or countdown badge at the top-right corner of a featured announcement. I could use relative to arrange event images and captions into the layout I want.
