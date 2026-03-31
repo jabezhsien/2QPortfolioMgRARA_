@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <meta name="author" content="RARA, Jabez Hsien G./PRADO, Eduardo Jose B.">
+  <meta name="description" content="testing and debugging">
+  <meta name="keywords" content="testing and debugging">
+  <title>CS3 </title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@300&family=Roboto&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+
+  <style>
+    tr:nth-child(1) ~ tr:nth-child(odd) {
+      background-color: lightgray;
+      color: black;
+    }
+    td, th {
+      padding: 10px;
+    }
+    table {
+      width: 90%;
+      margin: 0 auto;
+    }
+    caption {
+      font-size: 2em;
+      font-weight: bold;
+      padding: 10px;
+    }
+    
+  </style>
+</head>
+
+<body>
+  <header>
+    <nav>
+      <a href="index.html#start">Table</a>
+      <a href="index.html#input">Input</a>
+      <a href="index.html#output">Output</a>
+    </nav>
+    
+    <h1 style="padding: 30px">RARA, Jabez Hsien G./Magnesium  - Mar 2026 </h1>
+  </header>
+
+  <section id="table">
+    <table> 
+      <caption> Error Logs - place errors found in the table below</caption>
+      <tr class="rColor">
+        <th> item# </th> 
+        <th> code line#<br/>CSS or JS </th> 
+        <th> Description</th>
+        <th> Correction Done</th>
+      </tr>
+      <tr>
+        <td> 1 </td> 
+        <td> line 1 in js</td> 
+        <td> function plotPoint() is missing a bracket</td>
+        <td> added bracket to new line 26</td>
+      </tr>
+      <tr>
+        <td> 2 </td> 
+        <td> line 7 in js</td> 
+        <td> point.styleleft doesn't make sense</td>
+        <td> changed to point.style.left</td>
+      </tr>
+      <tr>
+        <td> 3 </td> 
+        <td> line 8 in js</td> 
+        <td> point.stylebottom doesn't make sense</td>
+        <td> changed to point.style.bottom</td>
+      </tr>
+      <tr>
+        <td> 4 </td> 
+        <td> line 1 in js</td> 
+        <td> function plotPoint() is missing parameters</td>
+        <td> added parameters (x0, y0, x, y)</td>
+      </tr>
+      <tr>
+        <td> 5 </td> 
+        <td> line 38 in js</td> 
+        <td> space between "nav a" and ":hover"</td>
+        <td> changed it to nav a:hover</td>
+      </tr>
+      <tr>
+        <td> 6 </td> 
+        <td> line 50 in js</td> 
+        <td> default position: static</td>
+        <td> added new line 54 position: absolute</td>
+      </tr>
+      <tr>
+        <td> 7 </td> 
+        <td> line 92 in js</td> 
+        <td> incorrect path</td>
+        <td> changed to "images/sprites.png"</td>
+      </tr>
+      <tr>
+        <td> 8 </td> 
+        <td> line 99 to 107 in CSS</td> 
+        <td> Incorrect background-position values</td>
+        <td> Corrected background-position values (switched the y-offset values of the social media icons and their corresponding hover states)</td>
+      </tr>
+      <tr>
+        <td> 9 </td> 
+        <td> line 109 to 117 in CSS</td> 
+        <td> Incorrect background-position values</td>
+        <td> Corrected background-position values (switched the y-offset values of the social media icons and their corresponding hover states)</td>
+      </tr>
+      <tr>
+        <td> 10 </td> 
+        <td> line 35 in script</td> 
+        <td> moves when scrolling</td>
+        <td> added position: fixed to the navigation bar and set top: 0 and left: 0</td>
+      </tr>
+     
+    </table>
+    <hr>
+  </section>
+  
+   
+  <!--- anchors for socmed site are done with image sprites -->
+  <footer>
+    <a href="https://facebook.com"> 
+    <div class="icon facebook"></div>
+    </a>
+    <a href="https://twitter.com">
+    <div class="icon twitter"></div>
+    </a>
+    <a href="https://github.com">
+    <div class="icon github"></div>
+    </a>
+  </footer>
+ 
+</body>
+
+</html>
